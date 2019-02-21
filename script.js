@@ -37,7 +37,6 @@ function createUrl(state, maxNumber) {
 
 // create elements
 function displayResults(responseJson) {
-  console.log(responseJson);
   const header = `<h2>Results</h2>`;
   const results = responseJson.map(element => {
     return `<h2> ${element.fullName} </h2>
@@ -45,7 +44,7 @@ function displayResults(responseJson) {
             <p>${element.description}</p>
             <h3>Website: <a href="${element.url}">${element.url}</a><h3>`
   });
-  $('#results').clear();
+  $('#results').empty();
   $('#results').prepend(header);
   $('#results').append(results);
 };
