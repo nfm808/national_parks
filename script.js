@@ -45,6 +45,7 @@ function displayResults(responseJson) {
             <p>${element.description}</p>
             <h3>Website: <a href="${element.url}">${element.url}</a><h3>`
   });
+  $('#results').clear();
   $('#results').prepend(header);
   $('#results').append(results);
 };
